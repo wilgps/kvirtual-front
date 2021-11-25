@@ -1,0 +1,9 @@
+.btn-user-menu {
+    border: none;
+background-color: transparent;
+}
+
+.btn-user-menu img {
+    width: 35px;
+    filter: brightness(2);
+}

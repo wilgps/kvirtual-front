@@ -1,0 +1,2 @@
+api: gunicorn --chdir ./src/API start
+web: gunicorn --chdir ./src/API start
