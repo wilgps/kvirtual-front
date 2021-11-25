@@ -1,3 +1,3 @@
 export const Configs = {
-  BaseUrl: process.env.BaseUrl,
+  BaseUrl: 'https://kivirtual.azurewebsites.net/',
 };
