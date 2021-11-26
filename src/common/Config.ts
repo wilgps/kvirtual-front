@@ -1,3 +1,4 @@
 export const Configs = {
-  BaseUrl: 'https://kivirtual.azurewebsites.net/',
+  BaseUrl:process.env.REACT_APP_URLAPI,
 };
+ 

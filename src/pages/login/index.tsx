@@ -34,7 +34,7 @@ class Login extends React.Component<LoginProps, LoginState> {
   handleRedirect = () => {
     const { location, history } = this.props;
     let url = "/";
-    if (location.state.from) url = location.state.from;
+    if (location.state?.from) url = location.state.from;
     history.push(url);
   };
 
