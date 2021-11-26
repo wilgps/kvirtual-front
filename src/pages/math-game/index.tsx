@@ -131,6 +131,10 @@ class MathGame extends React.Component<MathGameProps, MathGameState> {
         result = 0;
         break;
     }
+       console.log("Resposta: " + result);
+    console.log("Resposta esperada: " + this.state.result);
+    console.log("Operador: "+ this.state.Operator);
+    console.log("________________")
     return result === this.state.result;
   };
 
