@@ -66,6 +66,8 @@ class PortugueseGame extends React.Component<
       if (this.state.usedVerb.indexOf(k) < 0) nums.push(k);
     }
     const idx = Math.floor(Math.random() * nums.length);
+    if (this.state.usedVerb.length + 1 === this.state.verbs.length)
+      this.setState({ usedVerb: [] });
     this.setState({
       currentVerbAnswer: this.state.verbs[idx].Verb,
       currentVerb: Array.from(this.shotVerb(this.state.verbs[idx].Verb)),
@@ -88,7 +90,7 @@ class PortugueseGame extends React.Component<
   };
   addPoint = () => {
     this.Session.SavePoints(this.state.points + 1);
-    this.setState({ points: this.state.points + 1 });    
+    this.setState({ points: this.state.points + 1 });
   };
   startGame = () => {
     this.resetLifes();
@@ -139,7 +141,7 @@ class PortugueseGame extends React.Component<
       this.nextVerb();
     } else {
       this.removeLifes();
-      if (this.state.lifes > 1) alert("Resposta erra tente novamente.");
+      if (this.state.lifes > 1) alert("Resposta errada, tente novamente.");
       else {
         alert("Acabaram suas vidas 😓;");
         this.finishGame();
@@ -176,7 +178,7 @@ class PortugueseGame extends React.Component<
                     <br />
                     <br />
                     <fieldset className="phrase-game">
-                      <legend>Coloque a palavra em ordem</legend>
+                      <legend>Coloque a palavra em ordem, Arraste as letras</legend>
 
                       <DragDropContext onDragEnd={this.onDragEnd}>
                         <Droppable
