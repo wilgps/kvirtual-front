@@ -134,8 +134,8 @@ class MathGame extends React.Component<MathGameProps, MathGameState> {
     }
     console.log("Resposta: " + result);
     console.log("Resposta esperada: " + this.state.result);
-    console.log("Operador: "+ this.state.Operator);
-    console.log("________________")
+    console.log("Operador: " + this.state.Operator);
+    console.log("________________");
     return result === this.state.result;
   };
 
@@ -157,7 +157,7 @@ class MathGame extends React.Component<MathGameProps, MathGameState> {
                   <br />
                   <br />
                   <div className="btn-operator-group">
-                  Operações Matemáticas:
+                    Operações Matemáticas:
                     {this.listOperations().map((x, i) => (
                       <Button
                         key={i}
@@ -165,7 +165,7 @@ class MathGame extends React.Component<MathGameProps, MathGameState> {
                         variant={this.formartClassButtonOperation(x)}
                         className=""
                       >
-                        {x}
+                        {x === MathOperators.Division ? "÷" : x}
                       </Button>
                     ))}
                   </div>
