@@ -95,7 +95,7 @@ class MathGame extends React.Component<MathGameProps, MathGameState> {
       this.setState({ result: 0 });
     } else {
       this.removeLifes();
-      if (this.state.lifes > 1) alert("Resposta erra tente novamente.");
+      if (this.state.lifes > 1) alert("Resposta errada tente novamente.");
       else {
         alert("Acabaram suas vidas 😓;");
         this.finishGame();

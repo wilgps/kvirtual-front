@@ -61,6 +61,8 @@ class PortugueseGame extends React.Component<
   };
 
   setRandomVerb = () => {
+    if (!(this.state.verbs instanceof Array)) return;
+
     let nums = [];
     for (let k = 0; k < this.state.verbs.length; k++) {
       if (this.state.usedVerb.indexOf(k) < 0) nums.push(k);
@@ -178,7 +180,9 @@ class PortugueseGame extends React.Component<
                     <br />
                     <br />
                     <fieldset className="phrase-game">
-                      <legend>Coloque a palavra em ordem, Arraste as letras</legend>
+                      <legend>
+                        Coloque a palavra em ordem, Arraste as letras
+                      </legend>
 
                       <DragDropContext onDragEnd={this.onDragEnd}>
                         <Droppable

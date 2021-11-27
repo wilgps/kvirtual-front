@@ -70,7 +70,7 @@ class FooterComponent extends React.Component<
                 )}
                 <NavDropdown title="Jogos" id="basic-nav-dropdown">
                   <NavDropdown.Item as={Link} to="/game/math">
-                    Matematica
+                  Operações Matemática
                   </NavDropdown.Item>
                   <NavDropdown.Item as={Link} to="/game/portuguese">
                     Jogo de Palavras
