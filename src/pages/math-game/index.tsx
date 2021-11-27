@@ -157,7 +157,7 @@ class MathGame extends React.Component<MathGameProps, MathGameState> {
                   <br />
                   <br />
                   <div className="btn-operator-group">
-                  Operações Matemática:
+                  Operações Matemáticas:
                     {this.listOperations().map((x, i) => (
                       <Button
                         key={i}

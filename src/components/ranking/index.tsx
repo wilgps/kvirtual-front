@@ -33,7 +33,7 @@ class Ranking extends React.Component<RankingProps, RankingState> {
           <Col lg="6">
             {this.state.Math.length > 0 && (
               <fieldset>
-                <legend>Matematica</legend>
+                <legend>Matemática</legend>
                 <Table striped bordered hover>
                   <thead>
                     <tr>
@@ -62,7 +62,7 @@ class Ranking extends React.Component<RankingProps, RankingState> {
           <Col lg="6">
             {this.state.Portuguese.length > 0 && (
               <fieldset>
-                <legend>Portugues</legend>
+                <legend>português</legend>
                 <Table striped bordered hover>
                   <thead>
                     <tr>
