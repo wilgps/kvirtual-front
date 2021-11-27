@@ -89,7 +89,8 @@ class MathGame extends React.Component<MathGameProps, MathGameState> {
   handlerCalculate = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     if (this.CalculateResult()) {
-     this.addPoint();
+      alert("Parabens você acertou");
+      this.addPoint();
       this.generateNextOperation();
       this.setState({ result: 0 });
     } else {
@@ -131,7 +132,7 @@ class MathGame extends React.Component<MathGameProps, MathGameState> {
         result = 0;
         break;
     }
-       console.log("Resposta: " + result);
+    console.log("Resposta: " + result);
     console.log("Resposta esperada: " + this.state.result);
     console.log("Operador: "+ this.state.Operator);
     console.log("________________")
@@ -156,7 +157,7 @@ class MathGame extends React.Component<MathGameProps, MathGameState> {
                   <br />
                   <br />
                   <div className="btn-operator-group">
-                    Operações:
+                  Operações Matemática:
                     {this.listOperations().map((x, i) => (
                       <Button
                         key={i}

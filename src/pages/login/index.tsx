@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Api from "../../services/Api";
 import { login } from "../../services/Auth";
 import "./index.css";
-
+import logo from "../../assets/img/logo.jpeg";
 interface LoginProps extends RouteComponentProps {
   location: {
     pathname: string;
@@ -65,7 +65,7 @@ class Login extends React.Component<LoginProps, LoginState> {
       <Fragment>
         <div className="signin-container">
           <form className="form-signin" onSubmit={this.handleSignIn}>
-            <img alt="Logo" />
+            <img alt="Logo" src={logo} />
             {this.state.error && <p>{this.state.error}</p>}
             <div className="row g-2">
               <div className="col-md-12">

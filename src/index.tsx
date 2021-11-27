@@ -4,7 +4,6 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Routes from './routes';
 
-console.log(process.env);
 ReactDOM.render(
   <React.StrictMode>
     <Routes></Routes>
