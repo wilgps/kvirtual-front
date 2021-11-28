@@ -162,8 +162,7 @@ class MathGame extends React.Component<MathGameProps, MathGameState> {
                       <Button
                         key={i}
                         onClick={(e) => this.setCurrentOperator(e, x)}
-                        variant={this.formartClassButtonOperation(x)}
-                        className=""
+                        variant={this.formartClassButtonOperation(x)}                        
                       >
                         {x === MathOperators.Division ? "÷" : x}
                       </Button>
